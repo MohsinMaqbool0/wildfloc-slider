@@ -251,7 +251,7 @@ a {
 }
 .carousel-info .timeline-container {
    position: relative;
-   height: 5px; 
+   height: 3px; 
    width: 100%;
    border: none;
    background: #e4e4e4;
@@ -259,7 +259,7 @@ a {
 
 .carousel-info .timeline {
     position: absolute;
-    height: 5px; 
+    height: 3px; 
     width: 100%;
     top: -8px;
     right: 0;
