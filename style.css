@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 body {
   margin: 0;
 }
@@ -233,12 +235,12 @@ a {
 }
 /* new running time */
 .carousel-info {
-  max-width: 350px;
+  max-width: 300px;
   display: flex;
   margin-left: .5rem;
 
   align-items: center;
-  justify-content: flex-end;
+  justify-content: end;
   gap: 5px;
   width: 25%;
   position: absolute;
@@ -247,24 +249,39 @@ a {
   right: 22%;
   bottom: 20%;
 }
-.carousel-info .timeline {
-   height: 3px; 
+.carousel-info .timeline-container {
+   position: relative;
+   height: 5px; 
    width: 100%;
    border: none;
-   background: #fff;
-}
-.carousel-info .card-number{
-    font-family: "Poppins", sans-serif; 
-    font-size: 2rem;
+   background: #e4e4e4;
 }
 
-.carousel.next .time,
-.carousel.prev .time {
+.carousel-info .timeline {
+    position: absolute;
+    height: 5px; 
+    width: 100%;
+    top: -8px;
+    right: 0;
+    border: none;
+    background-color: red;
+}
+.carousel-info .card-number{
+    font-family: "Oswald", sans-serif; 
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.carousel.next .timeline,
+.carousel.prev .timeline {
   animation: runningTime 3s linear 1 forwards;
 }
+
 @keyframes runningTime {
   from {
-    width: 20%;
+    /* left: 0; */
+    /* right: 100%; */
+    width: 100%;
   }
   to {
     width: 0;
