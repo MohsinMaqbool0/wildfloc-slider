@@ -222,25 +222,25 @@ a {
 }
 
 /* running time */
-
-/* .carousel .time { */
-/*   position: absolute; */
-/*   z-index: 1000; */
-/*   width: 0%; */
-/*   height: 3px; */
-/*   background-color: #fff; */
-/*   right: 22%; */
-/*   bottom: 22%; */
-/* } */
+.carousel .time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  background-color: #fff;
+  right: 22%;
+  bottom: 22%;
+}
 /* new running time */
 .carousel-info {
-  max-width: 30rem;
+  max-width: 20rem;
   margin: 0 auto;
   display: flex;
 
   align-items: center;
+  justify-content: flex-end;
   gap: 5px;
-
+  width: 25%;
   position: absolute;
   color: #fff;
   z-index: 1000;
@@ -249,7 +249,7 @@ a {
 }
 .carousel-info .timeline {
    height: 2px; 
-   width: 180px; 
+   width: 60%;
    border: none;
    background: #fff;
 }
@@ -353,7 +353,7 @@ a {
   }
 
 .carousel-info .timeline {
-    width: 100px;
+    width: 100%;
   }
 
   @keyframes outFrame {
@@ -370,7 +370,11 @@ a {
 
 @media screen and (max-width: 425px) {
 
+  .carousel-info {
+    justify-content: flex-end;
+    width: 30%;
+  }
 .carousel-info .timeline {
-    width: 70px;
+      flex-grow: 1;
   }
 }

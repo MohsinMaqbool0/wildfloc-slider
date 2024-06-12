@@ -14,7 +14,7 @@ let timeRunning = 2000;
 let timeAutoNext = 7000;
 
 let cardNumber = thumbnailItemsDom.length;
-showcardNumber.textContent = cardNumber;
+showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
 
 nextDom.onclick = function() {
   showSlider("next");
