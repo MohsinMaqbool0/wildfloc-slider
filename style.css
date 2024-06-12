@@ -183,7 +183,7 @@ a {
   width: 150px;
   height: 220px;
   position: absolute;
-  bottom: 50px;
+  bottom: 30%;
   left: 50%;
   border-radius: 30px;
   animation: showImage 0.5s linear 1 forwards;
@@ -260,9 +260,9 @@ a {
 }
 @keyframes outFrame {
   to {
-    width: 150px;
-    height: 220px;
-    bottom: 50px;
+    width: 190px;
+    height: 300px;
+    bottom: 30%;
     left: 50%;
     border-radius: 20px;
   }

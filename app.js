@@ -9,20 +9,21 @@ let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
 let timeDom = document.querySelector(".carousel .time");
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 3000;
+let timeRunning = 2000;
 let timeAutoNext = 7000;
 
-nextDom.onclick = function () {
+nextDom.onclick = function() {
   showSlider("next");
 };
 
-prevDom.onclick = function () {
+prevDom.onclick = function() {
   showSlider("prev");
 };
 let runTimeOut;
 let runNextAuto = setTimeout(() => {
   next.click();
 }, timeAutoNext);
+
 function showSlider(type) {
   let SliderItemsDom = SliderDom.querySelectorAll(".carousel .list .item");
   let thumbnailItemsDom = document.querySelectorAll(
@@ -38,6 +39,7 @@ function showSlider(type) {
     thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
     carouselDom.classList.add("prev");
   }
+
   clearTimeout(runTimeOut);
   runTimeOut = setTimeout(() => {
     carouselDom.classList.remove("next");
