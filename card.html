@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Hover Effect</title>
+    <style>
+      .card {
+        position: relative;
+        width: 280px;
+        height: 330px;
+        border-radius: 0;
+        overflow: hidden;
+        box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+        background: #fff;
+        padding: 10px 10px;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: opacity 0.5s; /* Add transition effect */
+        opacity: 0; /* Initially hide the text */
+      }
+
+      .card:hover .text {
+        opacity: 1; /* Show the text on hover */
+      }
+
+      .info {
+        width: calc(
+          100% - 22px
+        ); /* Adjusted width to match the image width and removed padding */
+        height: 45%;
+        position: absolute;
+        top: 4%; /* Align the overlay to the bottom */
+        left: 50%;
+        transform: translate(
+          -50%,
+          100%
+        ); /* Initial position: moved down by 100% of its own height */
+        z-index: 3;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s; /* Added transition for opacity and transform */
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.334);
+        padding: 60px 0px;
+      }
+
+      .card:hover .info {
+        opacity: 1;
+        transform: translate(
+          -50%,
+          0
+        ); /* Move the overlay back up to its original position */
+      }
+      .info button {
+        padding: 0.6rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s ease;
+      }
+
+      .info button:hover {
+        background: dodgerblue;
+        color: white;
+      }
+
+      h2 {
+        margin-top: 0px;
+        font-family: "Montserrat";
+        text-align: center;
+        font-size: 1.8rem;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+
+      .col {
+        flex: 1;
+        text-align: center;
+        padding: 0 5px; /* Added padding */
+      }
+
+      .col h6 {
+        font-size: 16px; /* Decreased font size */
+      }
+
+      .col h4 {
+        font-size: 25px; /* Decreased font size */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="./mountain.png" alt="Mountain" />
+
+      <h2>Heading</h2>
+      <div class="info">
+        <div class="row">
+          <div class="col">
+            <h6>Tour</h6>
+            <h4>1</h4>
+          </div>
+          <div class="col">
+            <h6>Starting From</h6>
+            <h4>Rs 39,999</h4>
+          </div>
+        </div>
+
+        <button>View Collection</button>
+      </div>
+    </div>
+  </body>
+</html>
