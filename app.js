@@ -13,6 +13,7 @@ thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 2000;
 let timeAutoNext = 7000;
 
+// card number info
 let cardNumber = thumbnailItemsDom.length;
 showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
 
@@ -38,10 +39,26 @@ function showSlider(type) {
     SliderDom.appendChild(SliderItemsDom[0]);
     thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
     carouselDom.classList.add("next");
+
+    if (cardNumber <= 1) {
+      cardNumber = 4;
+    } else {
+      cardNumber--;
+    }
+
+    showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
   } else {
     SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
     thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
     carouselDom.classList.add("prev");
+
+    if (cardNumber >= 4) {
+      cardNumber = 1;
+    } else {
+      cardNumber++;
+    }
+
+    showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
   }
 
   clearTimeout(runTimeOut);
