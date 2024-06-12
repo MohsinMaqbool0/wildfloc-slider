@@ -7,10 +7,14 @@ let SliderDom = carouselDom.querySelector(".carousel .list");
 let thumbnailBorderDom = document.querySelector(".carousel .thumbnail");
 let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll(".item");
 let timeDom = document.querySelector(".carousel .time");
+const showcardNumber = document.querySelector(".card-number");
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 2000;
 let timeAutoNext = 7000;
+
+let cardNumber = thumbnailItemsDom.length;
+showcardNumber.textContent = cardNumber;
 
 nextDom.onclick = function() {
   showSlider("next");
