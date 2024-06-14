@@ -4645,17 +4645,6 @@
     }));
   // glide.js (end)
 
-    document.querySelectorAll('.cglide_bullet').forEach((bullet) => {
-
-      bullet.remov
-      bullet.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetIndex = parseInt(bullet.dataset.target, 10);
-
-        reviews.go(`=${targetIndex}`);
-      });
-    });
-
     const reviews = new Glide('.reviews', {
       type: 'carousel',
       perView: 3,
