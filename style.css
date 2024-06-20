@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 body {
   margin: 0;
@@ -230,7 +230,7 @@ a {
 .carousel-info {
   max-width: 300px;
   display: flex;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 
   align-items: center;
   justify-content: end;
@@ -243,31 +243,31 @@ a {
   bottom: 20%;
 }
 .carousel-info .timeline-container {
-   position: relative;
-   height: 3px; 
-   width: 100%;
-   border: none;
-   background: #e4e4e4;
+  position: relative;
+  height: 3px;
+  width: 100%;
+  border: none;
+  background: #e4e4e4;
 }
 
 .carousel-info .timeline {
-    position: absolute;
-    height: 3px; 
-    width: 100%;
-    top: -8px;
-    right: 0;
-    border: none;
-    background-color: red;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  top: -8px;
+  right: 0;
+  border: none;
+  background-color: red;
 }
-.carousel-info .card-number{
-    font-family: "Oswald", sans-serif; 
-    font-size: 2rem;
-    font-weight: 400;
+.carousel-info .card-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .carousel.next .timeline,
 .carousel.prev .timeline {
-  animation: runningTime 1s linear 1 forwards;
+  animation: runningTime 0.5s linear 1 forwards;
 }
 
 @keyframes runningTime {
@@ -294,7 +294,7 @@ a {
   left: 0;
 }
 @keyframes outFrame {
-  99%{
+  99% {
     opacity: 1;
   }
   to {
@@ -317,7 +317,7 @@ a {
     width: 0;
     opacity: 0;
   }
-  95%{
+  95% {
     opacity: 0;
   }
   to {
@@ -375,16 +375,16 @@ a {
     bottom: 5%;
     width: 40%;
   }
-.carousel-info .card-number {
+  .carousel-info .card-number {
     font-size: 1.5rem;
   }
 
-.carousel-info .timeline {
+  .carousel-info .timeline {
     width: 100%;
   }
 
   @keyframes outFrame {
-    to  {
+    to {
       width: 190px;
       height: 235px;
       bottom: 10%;
@@ -392,17 +392,15 @@ a {
       border-radius: 20px;
     }
   }
-
 }
 
 @media screen and (max-width: 425px) {
-
   .carousel-info {
     justify-content: flex-end;
     width: 35%;
     bottom: 5%;
   }
-.carousel-info .timeline {
-      flex-grow: 1;
+  .carousel-info .timeline {
+    flex-grow: 1;
   }
 }

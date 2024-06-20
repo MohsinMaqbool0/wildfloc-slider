@@ -17,13 +17,13 @@ let timeAutoNext = 5000;
 
 // card number info
 let cardNumber = thumbnailItemsDom.length;
-showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
+showcardNumber.textContent = cardNumber.toString().padStart(2, "0");
 
-nextDom.onclick = function() {
+nextDom.onclick = function () {
   showSlider("next");
 };
 
-prevDom.onclick = function() {
+prevDom.onclick = function () {
   showSlider("prev");
 };
 
@@ -50,7 +50,7 @@ function showSlider(type) {
       cardNumber--;
     }
 
-    showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
+    showcardNumber.textContent = cardNumber.toString().padStart(2, "0");
   } else {
     SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
     thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
@@ -62,7 +62,7 @@ function showSlider(type) {
       cardNumber++;
     }
 
-    showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
+    showcardNumber.textContent = cardNumber.toString().padStart(2, "0");
   }
 
   // -- required for animation
@@ -70,7 +70,7 @@ function showSlider(type) {
   runTimeOut = setTimeout(() => {
     carouselDom.classList.remove("next");
     carouselDom.classList.remove("prev");
-  }, 1000);
+  }, 500);
 
   // clearTimeout(runNextAuto);
   // runNextAuto = setTimeout(() => {
