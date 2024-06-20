@@ -10,8 +10,10 @@ let timeDom = document.querySelector(".carousel .time");
 const showcardNumber = document.querySelector(".card-number");
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 2000;
-let timeAutoNext = 7000;
+// this block next for given value
+// also is required for animation
+let timeRunning = 3000;
+let timeAutoNext = 5000;
 
 // card number info
 let cardNumber = thumbnailItemsDom.length;
@@ -24,6 +26,8 @@ nextDom.onclick = function() {
 prevDom.onclick = function() {
   showSlider("prev");
 };
+
+// auto next
 let runTimeOut;
 let runNextAuto = setTimeout(() => {
   next.click();
@@ -61,14 +65,15 @@ function showSlider(type) {
     showcardNumber.textContent = cardNumber.toString().padStart(2, '0');
   }
 
+  // -- required for animation
   clearTimeout(runTimeOut);
   runTimeOut = setTimeout(() => {
     carouselDom.classList.remove("next");
     carouselDom.classList.remove("prev");
-  }, timeRunning);
+  }, 1000);
 
-  clearTimeout(runNextAuto);
-  runNextAuto = setTimeout(() => {
-    next.click();
-  }, timeAutoNext);
+  // clearTimeout(runNextAuto);
+  // runNextAuto = setTimeout(() => {
+  //   next.click();
+  // }, timeAutoNext);
 }
